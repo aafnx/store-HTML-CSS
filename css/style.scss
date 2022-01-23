@@ -1,4 +1,238 @@
+$main-color:#F16D7F;
+$color-text: #fff;
+$title-background: #F1E4E6;
+
+@import url(//fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+
 * {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Lato', sans-serif, 'FontAwesome';
+}
+
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-page {
+    background: #222222;
+    min-height: 75px;
+    box-sizing: border-box;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0 0 0;
+    
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__search-form_styled {
+        margin: 0 0 0 40px;
+        color: #E8E8E8;
+    }
+
+    &__account {
+        display: block;
+        text-decoration: none;
+        margin: 0 33px;
+        width: 29px;
+        height: 29px;
+        background-image: url(/img/account-ico.svg);
+    }
+
+    &__shopping-cart {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        width: 32px;
+        height: 29px;
+        background-image: url(/img/shopping-cart-ico.svg);
+
+        &::after {
+            content: '5';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-text;
+            height: 20px;
+            width: 20px;
+            padding: 2px;
+            background-color: $main-color;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 18px;
+            left: 20px;
+        }
+    }
+}
+
+.search-form {
+    cursor: pointer;
+    position: relative;
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        
+        &:focus {
+            outline: 3px solid $main-color;
+            border: none;
+        }
+    }
+
+    &__dropdown {
+        list-style-type: none;
+        list-style-image: url(/img/search-ico.svg);
+    }
+}
+
+.category-nav {
+    cursor: pointer;
+    position: relative;
+
+    &__dropdown {
+        list-style-type: none;
+        list-style-image: url(/img/dropdown-menu-ico.svg);
+    }
+
+    &__menu {
+        position: absolute;
+        background-color: white;
+        top: 40px;
+        right: 0;
+        height: 200px;
+        width: 200px;
+        border: 1px solid #000;
+    }
+}
+
+.main-page-title {
+    background-color: $title-background;
+    
+    &__wrp {
+        display: flex;
+        height: 764px;
+    }
+
+    &__img {
+        background-image: url(/img/main-page-title-img.png);
+        background-position: -220px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 460px;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        align-self: center;
+        font-weight: 900;
+        font-size: 48px; 
+        line-height: 58px;
+        padding: 0 0 0 16px;
+        margin: 0 0 0 110px;
+        border-left: 12px solid $main-color;
+    }
+
+    &__text {
+        display: block;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+
+        &::after {
+            content: ' fashion';
+            color: $main-color;
+            
+        }
+    }
+}
+
+.main-page-category {
+    
+    &__wrp {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        background-color: #211616B2;
+        background-blend-mode: darken;
+        max-width: 360px;
+        width: 100%;
+        min-height: 260px;
+
+        &_bgi-women {
+            background-image: url(/img/category-women-img.jpg);
+        }
+
+        &_bgi-men {
+            background-image: url(/img/category-men-img.jpg);
+            margin: 0 30px;
+        }
+
+        &_bgi-kids {
+            background-image: url(/img/category-kids-img.jpg);
+        }
+
+        &_bgi-accesories {
+            margin: 30px 0 0 0;
+            max-width: 1140px;
+            min-height: 180px;
+            background-image: url(/img/category-accesories-img.jpg);
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: $color-text;
+    }
+
+    &__header {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $main-color ;
+    }
+}
+
+
+
