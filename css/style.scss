@@ -1,6 +1,7 @@
 $main-color:#F16D7F;
 $color-text: #fff;
 $title-background: #F1E4E6;
+$menu-color: #6F6E6E;
 
 @import url(//fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 
@@ -12,8 +13,6 @@ $title-background: #F1E4E6;
 body {
     font-family: 'Lato', sans-serif, 'FontAwesome';
 }
-
-
 
 .container {
     max-width: 1140px;
@@ -109,22 +108,72 @@ body {
 }
 
 .category-nav {
-    cursor: pointer;
     position: relative;
 
     &__dropdown {
         list-style-type: none;
         list-style-image: url(/img/dropdown-menu-ico.svg);
+        cursor: pointer;
     }
 
     &__menu {
         position: absolute;
-        background-color: white;
-        top: 40px;
-        right: 0;
-        height: 200px;
-        width: 200px;
-        border: 1px solid #000;
+        background-color: $color-text;
+        top: 49px; 
+        left: 160px;
+        padding: 37px 0 0 33px;
+        min-height: 764px;
+        width: 232px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        box-sizing: border-box;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        
+        &::after {
+            content: '\f00d';
+            color: $menu-color;
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    &__heading {
+        font-size: 14px;
+        line-height: 17px;
+        color: $main-color;
+        text-transform: uppercase;
+        margin: 24px 0 0 0;
+        position: relative;
+
+    }
+
+    &__list {
+        list-style-type: none;
+        
+    }
+
+    &__link {
+        text-decoration: none;
+        display: block;
+        padding: 11px 0 0 20px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $menu-color;
+
+        &:hover {
+            color: $main-color;
+        }
+
+        &:focus {
+            outline: 1px solid $main-color;
+        }
     }
 }
 
