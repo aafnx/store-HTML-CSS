@@ -25,6 +25,7 @@ body {
     min-height: 100vh;
 }
 
+// header
 .header-page {
     background: #222222;
     min-height: 75px;
@@ -177,6 +178,8 @@ body {
     }
 }
 
+// баннер сверху страницы и название брэнда
+
 .main-page-title {
     background-color: $title-background;
     
@@ -219,6 +222,7 @@ body {
     }
 }
 
+// категории
 .main-page-category {
     
     &__wrp {
@@ -282,6 +286,8 @@ body {
         color: $main-color ;
     }
 }
+
+// карточки с товарами
 
 .page-product-cards {
     margin-top: 96px;
@@ -431,10 +437,162 @@ body {
     }
 }
 
+// наши преимущества
 
 .our-advantages {
     margin: 95px 0 0;
+    background-color: #222224;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
+.advatages-card {
+    width: 300px;
+    margin: 103px 0;
+    box-sizing: border-box;
+    
+    &__img {
+        display: block;
+        margin: 0 auto;
+        height: 32px;
+        width:45px;
+    }
+
+    &__header {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #FBFBFB;
+        text-align: center;
+        margin: 28px 0 16px 0;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #FBFBFB;
+    }
+
+    &_margin {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+}
+
+// footer
+.footer-top {
+    height: 448px;
+    background: url(../img/footer-bgi.jpg) center no-repeat;
+    background-size: cover;
+    background-color: rgba(244, 244, 244, 0.7);
+    background-blend-mode: lighten;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+    }
+}
+
+.comment {
+    width: 360px;
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #222224;
+        margin: 40px 0 0;
+
+        &_italic {
+            font-style: italic;
+        }
+    }
+}
+
+.subscribe {
+    width: 360px;
+
+    &__text {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        color: #222224;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &_bold {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+
+    &__email-form {
+        position: relative;
+        margin: 32px 0 0 ;
+    }
+
+    &__email-input {
+        background: #E1E1E1;
+        outline: none;
+        border: 1px solid #E1E1E1;
+        width: 256px;
+        height: 49px;
+        box-sizing: border-box;
+        border-radius: 30px 0 0 30px;
+        padding: 0 0 0 22px;
+
+        &:focus {
+            border: 1px solid $main-color;
+        }
+    }
+
+    &__button {
+        width: 100px;
+        height: 49px;
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        border-radius: 0 30px 30px 0;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: center;
+        color: $color-text;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+
+        &:hover {
+            background: $color-text;
+            color: $main-color;
+        }
+
+        &:active {
+            background: $main-color;
+            color: $color-text;
+        }
+    }
+}
+
+
 
 
 
