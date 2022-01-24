@@ -23,6 +23,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    &-content {
+        flex-grow: 1;
+    }
 }
 
 // header
@@ -152,12 +156,10 @@ body {
         text-transform: uppercase;
         margin: 24px 0 0 0;
         position: relative;
-
     }
 
     &__list {
         list-style-type: none;
-        
     }
 
     &__link {
@@ -217,7 +219,6 @@ body {
         &::after {
             content: ' fashion';
             color: $main-color;
-            
         }
     }
 }
@@ -486,6 +487,7 @@ body {
 }
 
 // footer
+
 .footer-top {
     height: 448px;
     background: url(../img/footer-bgi.jpg) center no-repeat;
@@ -589,6 +591,57 @@ body {
             background: $main-color;
             color: $color-text;
         }
+    }
+}
+
+.footer-bot {
+    background: #222224;
+    min-height: 80px;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    &__copyright {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 400;
+        color: #FBFBFB;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    background-color: $color-text;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 8px 0 0;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &:hover {
+        background-color: $main-color;
+        color: $color-text;
+    }
+
+    &:active {
+        background-color: $color-text;
+        color: #000;
     }
 }
 

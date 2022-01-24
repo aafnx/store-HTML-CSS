@@ -24,6 +24,12 @@ body {
   min-height: 100vh;
 }
 
+.wrapper-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .header-page {
   background: #222222;
   min-height: 75px;
@@ -641,5 +647,73 @@ body {
 .subscribe__button:active {
   background: #F16D7F;
   color: #fff;
+}
+
+.footer-bot {
+  background: #222224;
+  min-height: 80px;
+}
+
+.footer-bot__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+.footer-bot__copyright {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #FBFBFB;
+}
+
+.footer-bot__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 8px 0 0;
+}
+
+.social-button:last-child {
+  margin: 0;
+}
+
+.social-button:hover {
+  background-color: #F16D7F;
+  color: #fff;
+}
+
+.social-button:active {
+  background-color: #fff;
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */
