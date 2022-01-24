@@ -1,4 +1,442 @@
+$main-color:#F16D7F;
+$color-text: #fff;
+$title-background: #F1E4E6;
+$menu-color: #6F6E6E;
+
+@import url(//fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+
 * {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Lato', sans-serif, 'FontAwesome';
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-page {
+    background: #222222;
+    min-height: 75px;
+    box-sizing: border-box;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0 0 0;
+    
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__search-form_styled {
+        margin: 0 0 0 40px;
+        color: #E8E8E8;
+    }
+
+    &__account {
+        display: block;
+        text-decoration: none;
+        margin: 0 33px;
+        width: 29px;
+        height: 29px;
+        background-image: url(../img/account-ico.svg);
+    }
+
+    &__shopping-cart {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        width: 32px;
+        height: 29px;
+        background-image: url(../img/shopping-cart-ico.svg);
+
+        &::after {
+            content: '5';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-text;
+            height: 20px;
+            width: 20px;
+            padding: 2px;
+            background-color: $main-color;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 18px;
+            left: 20px;
+        }
+    }
+}
+
+.search-form {
+    cursor: pointer;
+    position: relative;
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        
+        &:focus {
+            outline: 3px solid $main-color;
+            border: none;
+        }
+    }
+
+    &__dropdown {
+        list-style-type: none;
+        list-style-image: url(../img/search-ico.svg);
+    }
+}
+
+.category-nav {
+    position: relative;
+
+    &__dropdown {
+        list-style-type: none;
+        list-style-image: url(../img/dropdown-menu-ico.svg);
+        cursor: pointer;
+    }
+
+    &__menu {
+        position: absolute;
+        background-color: $color-text;
+        top: 49px; 
+        left: 160px;
+        padding: 37px 0 0 33px;
+        min-height: 764px;
+        width: 232px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        box-sizing: border-box;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        
+        &::after {
+            content: '\f00d';
+            color: $menu-color;
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    &__heading {
+        font-size: 14px;
+        line-height: 17px;
+        color: $main-color;
+        text-transform: uppercase;
+        margin: 24px 0 0 0;
+        position: relative;
+
+    }
+
+    &__list {
+        list-style-type: none;
+        
+    }
+
+    &__link {
+        text-decoration: none;
+        display: block;
+        padding: 11px 0 0 20px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $menu-color;
+
+        &:hover {
+            color: $main-color;
+        }
+
+        &:focus {
+            outline: 1px solid $main-color;
+        }
+    }
+}
+
+.main-page-title {
+    background-color: $title-background;
+    
+    &__wrp {
+        display: flex;
+        height: 764px;
+    }
+
+    &__img {
+        background-image: url(../img/main-page-title-img.png);
+        background-position: -220px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 460px;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        align-self: center;
+        font-weight: 900;
+        font-size: 48px; 
+        line-height: 58px;
+        padding: 0 0 0 16px;
+        margin: 0 0 0 110px;
+        border-left: 12px solid $main-color;
+    }
+
+    &__text {
+        display: block;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+
+        &::after {
+            content: ' fashion';
+            color: $main-color;
+            
+        }
+    }
+}
+
+.main-page-category {
+    
+    &__wrp {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        background-color: #211616B2;
+        background-blend-mode: darken;
+        max-width: 360px;
+        width: 100%;
+        min-height: 260px;
+
+        &_bgi-women {
+            background-image: url(../img/category-women-img.jpg);
+        }
+
+        &_bgi-men {
+            background-image: url(../img/category-men-img.jpg);
+            margin: 0 30px;
+        }
+
+        &_bgi-kids {
+            background-image: url(../img/category-kids-img.jpg);
+        }
+
+        &_bgi-accesories {
+            margin: 30px 0 0 0;
+            max-width: 1140px;
+            min-height: 180px;
+            background-image: url(../img/category-accesories-img.jpg);
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: $color-text;
+    }
+
+    &__header {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $main-color ;
+    }
+}
+
+.page-product-cards {
+    margin-top: 96px;
+}
+
+.product-cards-header {
+    margin: 0 auto;
+
+    &__title {
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+        color: #222;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        margin: 6px 0 0 0;
+    }
+}
+
+.product-cards-box {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: (48px-15px) 0 0 0;
+
+    &__list-item {
+        list-style-type: none;
+        margin: 15px 0;
+
+        &_margin {
+            margin: 15px 30px;
+        }
+    }
+}
+
+.card-item {
+    width: 360px;
+    min-height: 580px;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    position: relative;
+
+    &:hover &__img {
+        filter: brightness(30%);
+    }
+
+    &:hover &__button {
+        display: block;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__header-box {
+        padding: 25px 28px 20px 18px;
+    }
+
+    &__title {
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+        margin: 13px 0 18px 0;
+    }
+
+    &__price {
+        font-size: 16px;
+        line-height: 19px;
+        color: $main-color;
+        font-weight: 400;
+    }
+
+    &__button {
+        display: none;
+        outline: none;
+        border: 1px solid $color-text;
+        background: transparent;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-text;
+        font-weight: 400;
+        padding: 13px 16px 13px 50px;
+        position: absolute;
+        top: 188px;
+        left: 110px;
+        background-image: url(../img/shopping-cart-ico.svg);
+        background-position: 13px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        cursor: pointer;
+        // в макете не указаны стили, которые должны быть при наведении на кнопку, сделал на свое усмотрение
+        &:hover {
+            border: 1px solid $main-color;
+            box-shadow: 1px 1px 8px $main-color;
+        }
+
+        &:active {
+            box-shadow: 1px 1px 20px $main-color;
+        }
+    }
+}
+
+.browse-all-product-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid $main-color;
+    color: $main-color;
+    min-height: 47px;
+    width: 211px;
+    margin: (48px - 15px) auto 0;
+    padding: 14px 5px;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: $main-color;
+        color: $color-text;
+    }
+
+    &:active {
+        background-color: $color-text;
+        color: $main-color;
+        box-shadow: 1px 1px 20px $main-color;
+    }
+}
+
+
+.our-advantages {
+    margin: 95px 0 0;
+}
+
+
+
+
+
