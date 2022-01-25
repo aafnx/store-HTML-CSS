@@ -223,6 +223,66 @@ body {
     }
 }
 
+
+// название вверху страниц catalog.html
+
+.page-content-info {
+    background-color: #F8F3F4;
+    min-height: 148px;
+
+    &_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: inherit;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: $main-color;
+        text-transform: uppercase;
+    }
+}
+
+.breadcrumbs {
+
+    &__item {
+        display: inline;
+        list-style-type: none;
+
+        &:not(:first-child)::before {
+            content: "/\00a0";
+            color: inherit;
+            padding: 0 4px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        color: #636363;
+
+        &_active {
+            color: $main-color;
+        }
+
+        // макетом не предусмотрены эффекты при наведении на элементы breadcrumbs, добавил по своему усмотрению
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.21);
+        }
+
+        &:active {
+            text-decoration: underline $main-color;
+        }
+    }
+}
+
 // категории
 .main-page-category {
     
