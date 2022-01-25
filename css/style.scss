@@ -131,6 +131,7 @@ body {
         width: 232px;
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
         box-sizing: border-box;
+        z-index: 15;
     }
 
     &__title {
@@ -283,6 +284,54 @@ body {
     }
 }
 
+// pagination
+.pagination-box {
+    text-align: center;
+    margin: (49px-15px) 0 0 0;
+}
+
+.pagination {
+    border: 1px solid #EBEBEB;
+    border-radius: 3px;
+    display: inline-block;
+
+    &__item {
+        text-decoration: none;
+        padding: 10px;
+        color: #EBEBEB;
+        float: left;
+
+        &:first-child,
+        &:last-child {
+            color: #000;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.21);
+        }
+
+        &:active {
+            text-decoration: underline $main-color;
+        }
+
+        &_active {
+            color: $main-color;
+        }
+
+        &_deactivate {
+            &:hover {
+                cursor: default;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
 // категории
 .main-page-category {
     
@@ -348,10 +397,117 @@ body {
     }
 }
 
+
+// фильтр по товарам catalog.html
+
+.filters-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 51px;
+
+    &__wrp {
+        width: 360px;
+        position: relative;
+    }
+}
+
+.filter-main {
+    width: inherit;
+    padding: 13px 16px 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: -22px;
+    z-index: 15;
+
+    &[open] {
+        background: #fff;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+    
+    &[open] .filter-main__title {
+        color: #EF5B70;
+        // не разобрался как поменять цвет текущей svg иконки, просто меняю на другую иконку
+        background: url(../img/sort-ico-open.svg) 55px no-repeat;
+    }
+
+    &__title {
+        list-style-type: none;
+        background: url(../img/sort-ico.svg) 55px no-repeat;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        margin: 0 0 16px 0;
+        cursor: pointer;
+    }
+
+    &-nav {
+        margin-bottom: 18px;
+
+        &[open] .filter-main-nav__title {
+            color: $main-color;
+        }
+        
+        &__title {            
+            text-transform: uppercase;
+            list-style-type: none;
+            border-bottom: 1px solid #EBEBEB;
+            border-left: 5px solid $main-color;
+            padding: 9px 0 9px 10px;
+            // margin: 0 0 25px 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #6F6E6E;
+            cursor: pointer;
+        }
+
+        &__item {
+            list-style-type: none;
+
+            &:not(:last-child) .filter-main-nav__link {
+                margin: 0 0 11px 0;
+            }
+
+            &:first-child .filter-main-nav__link {
+                margin-top: 25px;
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #6F6E6E;
+            padding: 0 0 0 16px;
+
+            &:hover {
+                color: $main-color;
+            }
+    
+            &:active {
+                background-color: rgba(0, 0, 0, 0.21);
+            }
+        }
+    }
+}
+
+.filter-trending {
+    flex-grow: 1;
+}
+
 // карточки с товарами
 
 .page-product-cards {
     margin-top: 96px;
+
+    &_no-margin {
+        margin-top: 0;
+    }
 }
 
 .product-cards-header {
