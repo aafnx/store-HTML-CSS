@@ -1021,6 +1021,7 @@ body {
           align-items: center;
   width: 32px;
   height: 32px;
+  color: #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
