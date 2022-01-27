@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store. Catalog</title>
+    <!-- подключение font awesome -->
+    <script src="https://kit.fontawesome.com/514d13999e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <header class="header-page">
+                <div class="container">
+                    <div class="header-menu">
+                        <ul class="header-menu__list">
+                            <li>
+                                <a href="index.html"><img src="img/logo.svg" alt="brand logo"
+                                        class="header-menu__logo"></a>
+                            </li>
+                            <li>
+                                <!-- не совсем понятно как реализуется в макете поиск, просиходит переход на другую страницу, или поле поиска появляется после клика на иконку поиска. Я пошел 2 путем. Появление меню поиска реализовал через details и summary, чтобы работало именно по клику, а не по наведению. Как я понял, другой способ сделать появление меню по клику, только через JS -->
+                                <form action="#" class="search-form header-menu__search-form_styled">
+                                    <details class="search-form__wrp">
+                                        <summary class="search-form__dropdown">
+                                        </summary>
+                                        <input type="search" name="menu-search" placeholder="press Enter for search"
+                                            class="search-form__input">
+                                    </details>
+                                </form>
+                            </li>
+                        </ul>
+
+                        <ul class="header-menu__list">
+                            <li>
+                                <details class="category-nav">
+                                    <summary class="category-nav__dropdown">
+                                    </summary>
+                                    <nav class="category-nav__menu">
+                                        <h5 class="category-nav__title">
+                                            menu
+                                        </h5>
+                                        <h6 class="category-nav__heading">
+                                            man
+                                        </h6>
+                                        <ul class="category-nav__list">
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class=" category-nav__link">
+                                                    Bags
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class=" category-nav__link">
+                                                    Denim
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class=" category-nav__link">
+                                                    T-Shirts
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="category-nav__heading">
+                                            woman
+                                        </h6>
+                                        <ul class="category-nav__list">
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class=" category-nav__link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Jackets &amp;&nbsp;Coats
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Polos
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    T-Shirts
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Shirts
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="category-nav__heading">
+                                            kids
+                                        </h6>
+                                        <ul class="category-nav__list">
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Jackets &amp;&nbsp;Coats
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Polos
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    T-Shirts
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Shirts
+                                                </a>
+                                            </li>
+                                            <li class="category-nav__item">
+                                                <a href="catalog.html" class="category-nav__link">
+                                                    Bags
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </details>
+                            </li>
+                            <li>
+                                <a href="#" class="header-menu__account"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-menu__shopping-cart">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-page-content">
+                <div class="page-content-info">
+                    <div class="container page-content-info_box">
+                        <h3 class="page-content-info__title">new arrivals</h3>
+
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a href="index.html" class="breadcrumbs__link">home</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link">men</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link breadcrumbs__link_active ">new
+                                    arrivals</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <section class="page-product-cards page-product-cards_no-margin">
+
+                        <ul class="product-cards-box">
+                            <li class="product-cards-box__list-item">
+                                <article class="card-item">
+                                    <a href="#" class="card-item__link">
+                                        <img src="img/product-card-item-1.jpg" alt="product image"
+                                            class="card-item__img">
+                                        <header class="card-item__header-box">
+                                            <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
+                                            <p class="card-item__description">Known for her sculptural takes
+                                                on&nbsp;traditional
+                                                tailoring, Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                                                Moda
+                                                Operandi.</p>
+                                            <p class="card-item__price">$52.00</p>
+                                        </header>
+                                    </a>
+                                    <form action="#" class="card-item__form">
+                                        <button class="card-item__button">Add to&nbsp;Cart</button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="product-cards-box__list-item product-cards-box__list-item_margin">
+                                <article class="card-item">
+                                    <a href="#" class="card-item__link">
+                                        <img src="img/catalog-product-card-2.jpg" alt="product image"
+                                            class="card-item__img">
+                                        <header class="card-item__header-box">
+                                            <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
+                                            <p class="card-item__description">Known for her sculptural takes
+                                                on&nbsp;traditional
+                                                tailoring, Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                                                Moda
+                                                Operandi.</p>
+                                            <p class="card-item__price">$52.00</p>
+                                        </header>
+                                    </a>
+                                    <form action="#" class="card-item__form">
+                                        <button class="card-item__button">Add to&nbsp;Cart</button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="product-cards-box__list-item">
+                                <article class="card-item">
+                                    <a href="#" class="card-item__link">
+                                        <img src="img/product-card-item-3.jpg" alt="product image"
+                                            class="card-item__img">
+                                        <header class="card-item__header-box">
+                                            <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
+                                            <p class="card-item__description">Known for her sculptural takes
+                                                on&nbsp;traditional
+                                                tailoring, Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                                                Moda
+                                                Operandi.</p>
+                                            <p class="card-item__price">$52.00</p>
+                                        </header>
+                                    </a>
+                                    <form action="#" class="card-item__form">
+                                        <button class="card-item__button">Add to&nbsp;Cart</button>
+                                    </form>
+                                </article>
+                            </li>
+
+                        </ul>
+
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer-top">
+                <div class="container footer-top__box">
+                    <div class="comment">
+                        <img src="img/footer-user-avatar.png" alt="user avatar" class="comment__img">
+                        <blockquote class="comment__text">
+                            &laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi, <span
+                                class="comment__text_italic">
+                                a
+                                pulvinar
+                                purus condimentum&raquo;</span>
+                        </blockquote>
+                    </div>
+
+                    <div class="subscribe">
+                        <p class="subscribe__text">
+                            <span class="subscribe__text_bold">
+                                subscribe
+                            </span>
+                            for our newletter
+                            and promotion
+                        </p>
+
+                        <form action="#" class="subscribe__email-form">
+                            <input type="email" placeholder="Enter Your Email" class="subscribe__email-input">
+                            <button class="subscribe__button">Subsribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bot">
+                <div class="container">
+                    <div class="footer-bot__box">
+                        <p class="footer-bot__copyright">
+                            &copy;&nbsp;2021 Brand All Rights Reserved.
+                        </p>
+
+                        <div class="footer-bot__social">
+                            <a href="//www.facebook.com/" target="_blank" class="social-button">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <a href="//www.instagram.com/" target="_blank" class="social-button">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="//www.pinterest.ru/" target="_blank" class="social-button">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+
+                            <a href="//twitter.com/" target="_blank" class="social-button">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
