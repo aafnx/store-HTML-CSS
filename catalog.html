@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store. Main page</title>
+    <title>Store. Catalog</title>
     <!-- подключение font awesome -->
     <script src="https://kit.fontawesome.com/514d13999e.js" crossorigin="anonymous"></script>
 
@@ -154,86 +154,265 @@
             </header>
 
             <main class="main-page-content">
-                <section class="main-page-title">
-                    <div class="container">
-                        <div class="main-page-title__wrp">
-                            <div class="main-page-title__img">
-                            </div>
+                <div class="page-content-info">
+                    <div class="container page-content-info_box">
+                        <h3 class="page-content-info__title">new arrivals</h3>
 
-                            <h1 class="main-page-title__header">
-                                the brand<span class="main-page-title__text">of luxerious</span>
-                            </h1>
-                        </div>
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a href="index.html" class="breadcrumbs__link">home</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link">men</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="catalog.html" class="breadcrumbs__link breadcrumbs__link_active ">new
+                                    arrivals</a>
+                            </li>
+                        </ul>
                     </div>
-
-
-                </section>
+                </div>
 
                 <div class="container">
-                    <section class="main-page-category">
 
-                        <div class="main-page-category__wrp">
-                            <div class="main-page-category__item main-page-category__item_bgi-women">
-                                <a href="catalog.html" class="main-page-category__link">
-                                    <p class="main-page-category__text">
-                                        30% off
-                                    </p>
-                                    <h4 class="main-page-category__header">
-                                        for women
-                                    </h4>
-                                </a>
+
+                    <section class="page-product-cards page-product-cards_no-margin">
+
+                        <form action='#' class="filters-box">
+                            <div class="filters-box__wrp">
+                                <details class="filter-main">
+                                    <summary class="filter-main__title">
+                                        filter
+                                    </summary>
+
+                                    <details class="filter-main-nav" open>
+                                        <summary class="filter-main-nav__title">
+                                            category
+                                        </summary>
+                                        <ul class="filter-main-nav__list">
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Bags
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Denim
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Hoodies &amp;&nbsp;Sweatshirts
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Jackets &amp;&nbsp;Coats
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Polos
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Shirts
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Shoes
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Sweaters &amp;&nbsp;Knits
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    T-Shirts
+                                                </a></li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Tanks
+                                                </a></li>
+                                        </ul>
+                                    </details>
+
+                                    <details class="filter-main-nav">
+                                        <summary class="filter-main-nav__title">
+                                            brand
+                                        </summary>
+                                        <ul class="filter-main-nav__list">
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Brand&nbsp;&mdash; 1
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Brand&nbsp;&mdash; 2
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Brand&nbsp;&mdash; 3
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Brand&nbsp;&mdash; 4
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Brand&nbsp;&mdash; 5
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </details>
+
+                                    <details class="filter-main-nav">
+                                        <summary class="filter-main-nav__title">
+                                            designer
+                                        </summary>
+                                        <ul class="filter-main-nav__list">
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Designer&nbsp;&mdash; 1
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Designer&nbsp;&mdash; 2
+                                                </a>
+                                            </li>
+                                            <li class="filter-main-nav__item">
+                                                <a href="#" class="filter-main-nav__link">
+                                                    Designer&nbsp;&mdash; 3
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </details>
+
+
+                                </details>
                             </div>
 
-                            <div class="main-page-category__item main-page-category__item_bgi-men">
-                                <a href="catalog.html" class="main-page-category__link">
-                                    <p class="main-page-category__text">
-                                        hot deal
-                                    </p>
-                                    <h4 class="main-page-category__header">
-                                        for men
-                                    </h4>
-                                </a>
-                            </div>
+                            <details class="options-product">
+                                <summary class="options-product__title">
+                                    trending now
+                                </summary>
+                                <ul class="options-product__wrp">
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="item-1" id="item-1"
+                                            class="options-product__checkbox">
+                                        <label for="item-1" class="options-product__label">
+                                            item&nbsp;&mdash; 1
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="item-2" id="item-2"
+                                            class="options-product__checkbox">
+                                        <label for="item-2" class="options-product__label">
+                                            item&nbsp;&mdash; 2
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="item-3" id="item-3"
+                                            class="options-product__checkbox">
+                                        <label for="item-3" class="options-product__label">
+                                            item&nbsp;&mdash; 3
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="item-4" id="item-4"
+                                            class="options-product__checkbox">
+                                        <label for="item-4" class="options-product__label">
+                                            item&nbsp;&mdash; 4
+                                        </label>
+                                    </li>
+                                </ul>
+                            </details>
 
-
-                            <div class="main-page-category__item main-page-category__item_bgi-kids">
-                                <a href="catalog.html" class="main-page-category__link">
-                                    <p class="main-page-category__text">
-                                        new arrivals
-                                    </p>
-                                    <h4 class="main-page-category__header">
-                                        for kids
-                                    </h4>
-                                </a>
-                            </div>
-
-                            <div class="main-page-category__item main-page-category__item_bgi-accesories">
-                                <a href="catalog.html" class="main-page-category__link">
-                                    <p class="main-page-category__text">
-                                        luxerious &amp;&nbsp;trendy
-                                    </p>
-                                    <h4 class="main-page-category__header">
-
-                                        accesories
-                                    </h4>
-                                </a>
-                            </div>
-                        </div>
-
-
-                    </section>
-
-
-                    <section class="page-product-cards">
-
-                        <header class="product-cards-header">
-                            <h3 class="product-cards-header__title">
-                                Fetured Items
-                            </h3>
-                            <p class="product-cards-header__text">
-                                Shop for items on&nbsp;what we&nbsp;featured in&nbsp;this week
-                            </p>
-                        </header>
+                            <details class="options-product">
+                                <summary class="options-product__title">
+                                    size
+                                </summary>
+                                <ul class="options-product__wrp">
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="size-xs" id="size-xs"
+                                            class="options-product__checkbox">
+                                        <label for="size-xs" class="options-product__label">
+                                            xs
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="size-s" id="size-s"
+                                            class="options-product__checkbox">
+                                        <label for="size-s" class="options-product__label">
+                                            s
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="size-m" id="size-m"
+                                            class="options-product__checkbox">
+                                        <label for="size-m" class="options-product__label">
+                                            m
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="size-l" id="size-l"
+                                            class="options-product__checkbox">
+                                        <label for="size-l" class="options-product__label">
+                                            l
+                                        </label>
+                                    </li>
+                                </ul>
+                            </details>
+                            <details class="options-product">
+                                <summary class="options-product__title">
+                                    price
+                                </summary>
+                                <ul class="options-product__wrp options-product__price_width">
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="price-10-50" id="price-10-50"
+                                            class="options-product__checkbox">
+                                        <label for="price-10-50" class="options-product__label">
+                                            10-50$
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="price-50-100" id="price-50-100"
+                                            class="options-product__checkbox">
+                                        <label for="price-50-100" class="options-product__label">
+                                            50-100$
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="price-100-150" id="price-100-150"
+                                            class="options-product__checkbox">
+                                        <label for="price-100-150" class="options-product__label">
+                                            100-150$
+                                        </label>
+                                    </li>
+                                    <li class="options-product__item">
+                                        <input type="checkbox" name="price-150-200" id="price-150-200"
+                                            class="options-product__checkbox">
+                                        <label for="price-150-200" class="options-product__label">
+                                            150-200$
+                                        </label>
+                                    </li>
+                                </ul>
+                            </details>
+                        </form>
 
                         <ul class="product-cards-box">
                             <li class="product-cards-box__list-item">
@@ -260,7 +439,7 @@
                             <li class="product-cards-box__list-item product-cards-box__list-item_margin">
                                 <article class="card-item">
                                     <a href="#" class="card-item__link">
-                                        <img src="img/product-card-item-2.jpg" alt="product image"
+                                        <img src="img/catalog-product-card-2.jpg" alt="product image"
                                             class="card-item__img">
                                         <header class="card-item__header-box">
                                             <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
@@ -323,7 +502,7 @@
                             <li class="product-cards-box__list-item product-cards-box__list-item_margin">
                                 <article class="card-item">
                                     <a href="#" class="card-item__link">
-                                        <img src="img/product-card-item-5.jpg" alt="product image"
+                                        <img src="img/catalog-product-card-5.jpg" alt="product image"
                                             class="card-item__img">
                                         <header class="card-item__header-box">
                                             <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
@@ -344,7 +523,70 @@
                             <li class="product-cards-box__list-item">
                                 <article class="card-item">
                                     <a href="#" class="card-item__link">
-                                        <img src="img/product-card-item-6.jpg" alt="product image"
+                                        <img src="img/catalog-product-card-6.jpg" alt="product image"
+                                            class="card-item__img">
+                                        <header class="card-item__header-box">
+                                            <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
+                                            <p class="card-item__description">Known for her sculptural takes
+                                                on&nbsp;traditional
+                                                tailoring, Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                                                Moda
+                                                Operandi.</p>
+                                            <p class="card-item__price">$52.00</p>
+                                        </header>
+                                    </a>
+                                    <form action="#" class="card-item__form">
+                                        <button class="card-item__button">Add to&nbsp;Cart</button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="product-cards-box__list-item">
+                                <article class="card-item">
+                                    <a href="#" class="card-item__link">
+                                        <img src="img/catalog-product-card-7.jpg" alt="product image"
+                                            class="card-item__img">
+                                        <header class="card-item__header-box">
+                                            <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
+                                            <p class="card-item__description">Known for her sculptural takes
+                                                on&nbsp;traditional
+                                                tailoring, Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                                                Moda
+                                                Operandi.</p>
+                                            <p class="card-item__price">$52.00</p>
+                                        </header>
+                                    </a>
+                                    <form action="#" class="card-item__form">
+                                        <button class="card-item__button">Add to&nbsp;Cart</button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="product-cards-box__list-item product-cards-box__list-item_margin">
+                                <article class="card-item">
+                                    <a href="#" class="card-item__link">
+                                        <img src="img/catalog-product-card-8.jpg" alt="product image"
+                                            class="card-item__img">
+                                        <header class="card-item__header-box">
+                                            <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
+                                            <p class="card-item__description">Known for her sculptural takes
+                                                on&nbsp;traditional
+                                                tailoring, Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                                                Moda
+                                                Operandi.</p>
+                                            <p class="card-item__price">$52.00</p>
+                                        </header>
+                                    </a>
+                                    <form action="#" class="card-item__form">
+                                        <button class="card-item__button">Add to&nbsp;Cart</button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="product-cards-box__list-item">
+                                <article class="card-item">
+                                    <a href="#" class="card-item__link">
+                                        <img src="img/catalog-product-card-9.jpg" alt="product image"
                                             class="card-item__img">
                                         <header class="card-item__header-box">
                                             <h4 class="card-item__title">ELLERY X&nbsp;M&rsquo;O CAPSULE</h4>
@@ -363,7 +605,25 @@
                             </li>
                         </ul>
 
-                        <a href="#" class="browse-all-product-button">Browse All Product</a>
+                        <div class="pagination-box">
+                            <div class="pagination">
+                                <a href="#" class="pagination__item">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#" class="pagination__item pagination__item_active">1</a>
+                                <a href="#" class="pagination__item">2</a>
+                                <a href="#" class="pagination__item">3</a>
+                                <a href="#" class="pagination__item">4</a>
+                                <a href="#" class="pagination__item">5</a>
+                                <a href="#" class="pagination__item">6</a>
+                                <span class="pagination__item pagination__item_deactivate">...</span>
+                                <a href="#" class="pagination__item">20</a>
+
+                                <a href="#" class="pagination__item">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </section>
                 </div>
 
