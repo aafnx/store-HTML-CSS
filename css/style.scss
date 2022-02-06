@@ -1594,9 +1594,17 @@ body {
 		color: #fbfbfb;
 	}
 
-	&__social {
+	&__social-list {
 		display: flex;
 		align-items: center;
+		list-style-type: none;
+
+		&-item {
+			margin: 0 8px 0 0;
+			&:last-child {
+				margin: 0;
+			}
+		}
 	}
 }
 
@@ -1611,12 +1619,7 @@ body {
 	background-color: $color-text;
 	text-decoration: none;
 	cursor: pointer;
-	margin: 0 8px 0 0;
 	transition: background-color 500ms, color 500ms;
-
-	&:last-child {
-		margin: 0;
-	}
 
 	&:hover {
 		background-color: $main-color;
