@@ -376,12 +376,10 @@ body {
 
 // категории catalog.html
 .main-page-category {
-	&__wrp {
-		margin-top: 65px;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
+	margin-top: 65px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
 	&__item {
 		background-color: #211616b2;
