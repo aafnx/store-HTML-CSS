@@ -564,7 +564,6 @@ body {
 	&__wrp {
 		position: absolute;
 		width: 100%;
-		// top: 21px;
 		left: 0;
 		background: #ffffff;
 		box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
@@ -595,6 +594,10 @@ body {
 			background-color: $main-color;
 			content: "\f00c";
 			color: $color-text;
+		}
+
+		&:checked + .options-product__label {
+			color: $main-color;
 		}
 
 		&:not(:checked) + .options-product__label:hover::before {
@@ -817,9 +820,6 @@ body {
 		font-weight: 400;
 		line-height: 17px;
 		color: #6f6e6e;
-		&:hover {
-			background-color: #ccc;
-		}
 
 		&:not(:last-child) {
 			margin-bottom: 5px;
@@ -838,25 +838,26 @@ body {
 
 			&::before {
 				content: "";
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
+				display: inline-block;
 				width: 1em;
 				height: 1em;
-				border: 1px solid #6f6e6e;
-				border-radius: 1em;
-				margin-right: 0.5em;
+				border: 1px solid #ebebeb;
+				margin-right: 10px;
 			}
 		}
 
 		&:checked + .dropdown-filter__text::before {
+			border: 1px solid #6f6e6e;
 			background-color: $main-color;
 			content: "\f00c";
-			color: #fff;
-			font-size: 1em;
+			color: $color-text;
+		}
+		&:not(:checked) + .dropdown-filter__text:hover::before {
+			background-color: $main-color + 100%;
 		}
 		&:checked ~ .dropdown-filter__text {
 			color: $main-color;
+			animation: checked 3s infinite linear alternate;
 		}
 	}
 	&__text {
@@ -1331,14 +1332,17 @@ body {
 		}
 
 		&:checked + .registration-form__radio::before {
+			content: "\f00c";
+			color: #fff;
 			background-color: $main-color;
-			width: 1.5em;
-			height: 1.5em;
+			font-size: 1.3em;
 		}
 		&:checked + .registration-form__radio {
-			text-transform: uppercase;
 			color: $main-color;
 			animation: checked 3s infinite linear alternate;
+		}
+		&:not(:checked) + .registration-form__radio:hover::before {
+			background-color: $main-color + 100%;
 		}
 	}
 	&__caption {
