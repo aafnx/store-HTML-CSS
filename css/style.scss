@@ -326,21 +326,22 @@ body {
 }
 
 // pagination
-.pagination-box {
-	text-align: center;
-	margin: (49px-15px) 0 0 0;
-}
 
 .pagination {
+	margin: (49px-15px) auto 0 auto;
 	border: 1px solid #ebebeb;
 	border-radius: 3px;
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 308px;
+	height: 40px;
+	box-sizing: border-box;
 
 	&__item {
 		text-decoration: none;
 		padding: 10px;
 		color: #ebebeb;
-		float: left;
 
 		&:first-child,
 		&:last-child {

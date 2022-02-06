@@ -393,22 +393,29 @@ body {
   text-decoration: none;
 }
 
-.pagination-box {
-  text-align: center;
-  margin: 34px 0 0 0;
-}
-
 .pagination {
+  margin: 34px auto 0 auto;
   border: 1px solid #ebebeb;
   border-radius: 3px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 308px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .pagination__item {
   text-decoration: none;
   padding: 10px;
   color: #ebebeb;
-  float: left;
 }
 
 .pagination__item:first-child, .pagination__item:last-child {
