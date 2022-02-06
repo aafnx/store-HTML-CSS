@@ -985,6 +985,252 @@ body {
 	}
 }
 
+// форма покупок cart.html
+
+.shopping-cart-form {
+	display: flex;
+	justify-content: center;
+	margin-top: 96px;
+	margin-bottom: 128px;
+
+	&__wrp:last-child {
+		margin-left: 130px;
+	}
+
+	&__button-box {
+		margin-top: 72px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__product-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 234px;
+		min-height: 50px;
+		text-align: center;
+		cursor: pointer;
+		border: 1px solid #a4a4a4;
+		outline: none;
+		background-color: #fff;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000;
+		text-transform: uppercase;
+		text-decoration: none;
+		&:focus {
+			outline: 1px solid $main-color;
+		}
+		&:hover {
+			background-color: #a4a4a4;
+			color: #fff;
+		}
+		&:active {
+			background-color: #fff;
+			color: #a4a4a4;
+		}
+	}
+}
+
+.shopping-cart-product-item {
+	display: flex;
+	width: 652px;
+	min-height: 306px;
+	box-sizing: border-box;
+	box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+	background-color: #fff;
+	&:not(:last-of-type) {
+		margin-bottom: 40px;
+	}
+
+	&__link {
+		text-decoration: none;
+		outline: none;
+	}
+
+	&__img {
+		display: block;
+		height: 306px;
+	}
+
+	&__wrp {
+		padding: 22px 31px;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 29px;
+		color: #222222;
+		width: 200px;
+		position: relative;
+		margin-bottom: 42px;
+	}
+	&__close-btn {
+		color: #575757;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		position: absolute;
+		top: 0;
+		right: -125px;
+		cursor: pointer;
+		&:hover {
+			color: $main-color;
+		}
+		&:focus {
+			outline: 1px solid $main-color;
+		}
+	}
+	&__feature {
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 26px;
+		color: #575757;
+		text-transform: capitalize;
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+	}
+
+	&__price {
+		color: $main-color;
+	}
+
+	&__quantity {
+		width: 45px;
+		margin-left: 20px;
+		padding: 1px 5px;
+		box-sizing: border-box;
+		text-align: center;
+		color: #656565;
+		border: 1px solid #eaeaea;
+		&:focus {
+			outline: 1px solid $main-color;
+		}
+	}
+}
+
+.shopping-cart-shipping {
+	&__title {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		color: #222222;
+		text-transform: uppercase;
+		margin: 20px 0;
+	}
+
+	&__input {
+		border: 1px solid #a4a4a4;
+		height: 45px;
+		width: 360px;
+		padding: 12px 16px;
+		margin-bottom: 20px;
+		&:focus {
+			outline: 1px solid $main-color;
+		}
+	}
+
+	&__button {
+		background-color: #fff;
+		border: 1px solid #a4a4a4;
+		color: #4a4a4a;
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 13px;
+		text-transform: uppercase;
+		width: 100px;
+		min-height: 35px;
+		cursor: pointer;
+		&:focus {
+			outline: 1px solid $main-color;
+		}
+		&:hover {
+			background-color: #a4a4a4;
+			color: #fff;
+		}
+		&:active {
+			background-color: #fff;
+			color: #a4a4a4;
+		}
+	}
+}
+
+.shopping-cart-checkout {
+	width: 360px;
+	height: 214px;
+	box-sizing: border-box;
+	background-color: #f5f3f3;
+	margin: 58px 0 0 0;
+	padding: 40px 35px;
+
+	&__sub-total-text {
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 11px;
+		line-height: 13px;
+		color: #4a4a4a;
+		&_price {
+			margin-left: 26px;
+		}
+	}
+	&__grand-total-text {
+		margin: 12px 0 0 0;
+		text-align: right;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		color: #222;
+		&_price {
+			margin-left: 26px;
+			font-weight: 700;
+			color: $main-color;
+		}
+	}
+
+	&__button {
+		margin: 40px auto 0;
+		display: block;
+		background-color: $main-color;
+		border: none;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		color: #fff;
+		text-transform: uppercase;
+		cursor: pointer;
+		min-height: 50px;
+		padding: 15px 43px;
+		box-sizing: border-box;
+		position: relative;
+		&::before {
+			content: "";
+			height: 1px;
+			width: 275px;
+			background-color: #e2e2e2;
+			position: absolute;
+			top: -17px;
+			left: 0;
+		}
+		&:focus {
+			outline: 1px solid #000;
+		}
+		&:hover {
+			background-color: #fff;
+			color: $main-color;
+			border: 1px solid $main-color;
+		}
+		&:active {
+			background-color: $main-color;
+			color: #fff;
+		}
+	}
+}
+
 // наши преимущества
 
 .our-advantages {
