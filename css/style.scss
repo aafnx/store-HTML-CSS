@@ -1230,10 +1230,20 @@ body {
 		font-size: 16px;
 		line-height: 19px;
 		color: #222;
+		position: relative;
 		&_price {
 			margin-left: 26px;
 			font-weight: 700;
 			color: $main-color;
+		}
+		&::after {
+			content: "";
+			height: 1px;
+			width: 275px;
+			background-color: #e2e2e2;
+			position: absolute;
+			bottom: -20px;
+			left: 6px;
 		}
 	}
 
@@ -1251,17 +1261,8 @@ body {
 		min-height: 50px;
 		padding: 15px 43px;
 		box-sizing: border-box;
-		position: relative;
 		transition: 500ms;
-		&::before {
-			content: "";
-			height: 1px;
-			width: 275px;
-			background-color: #e2e2e2;
-			position: absolute;
-			top: -17px;
-			left: 0;
-		}
+
 		&:focus {
 			outline: 1px solid #000;
 		}

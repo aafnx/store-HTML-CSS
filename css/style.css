@@ -1438,12 +1438,23 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #222;
+  position: relative;
 }
 
 .shopping-cart-checkout__grand-total-text_price {
   margin-left: 26px;
   font-weight: 700;
   color: #f16d7f;
+}
+
+.shopping-cart-checkout__grand-total-text::after {
+  content: "";
+  height: 1px;
+  width: 275px;
+  background-color: #e2e2e2;
+  position: absolute;
+  bottom: -20px;
+  left: 6px;
 }
 
 .shopping-cart-checkout__button {
@@ -1461,19 +1472,8 @@ body {
   padding: 15px 43px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
   -webkit-transition: 500ms;
   transition: 500ms;
-}
-
-.shopping-cart-checkout__button::before {
-  content: "";
-  height: 1px;
-  width: 275px;
-  background-color: #e2e2e2;
-  position: absolute;
-  top: -17px;
-  left: 0;
 }
 
 .shopping-cart-checkout__button:focus {
