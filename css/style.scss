@@ -5,6 +5,27 @@ $menu-color: #6f6e6e;
 
 @import url(//fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes checked {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	100% {
+		transform: translateY(-2px);
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -121,7 +142,6 @@ body {
 		list-style-image: url(../img/dropdown-menu-ico.svg);
 		cursor: pointer;
 	}
-
 	&__menu {
 		position: absolute;
 		background-color: $color-text;
@@ -133,6 +153,10 @@ body {
 		box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 		box-sizing: border-box;
 		z-index: 15;
+		transition: transform 1s ease-out;
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 
 	&__title {
@@ -609,6 +633,7 @@ body {
 		align-items: center;
 		color: #000;
 		cursor: pointer;
+		transition: 300ms;
 
 		&:hover {
 			color: $main-color;
@@ -709,6 +734,7 @@ body {
 		min-height: 48px;
 		padding: 5px;
 		cursor: pointer;
+		transition: 500ms;
 
 		&:hover {
 			background-color: $main-color;
@@ -948,10 +974,13 @@ body {
 		background-repeat: no-repeat;
 		background-size: auto;
 		cursor: pointer;
+		transition: 500ms;
 		// в макете не указаны стили, которые должны быть при наведении на кнопку, сделал на свое усмотрение
 		&:hover {
 			border: 1px solid $main-color;
 			box-shadow: 1px 1px 8px $main-color;
+			transform: rotate(360deg);
+			transition: transform 10s linear;
 		}
 
 		&:active {
@@ -972,6 +1001,7 @@ body {
 	margin: (48px - 15px) auto 0;
 	padding: 14px 5px;
 	box-sizing: border-box;
+	transition: background-color 1s, color 1s, box-shadow 1s;
 
 	&:hover {
 		background-color: $main-color;
@@ -1020,6 +1050,7 @@ body {
 		color: #000;
 		text-transform: uppercase;
 		text-decoration: none;
+		transition: 500ms;
 		&:focus {
 			outline: 1px solid $main-color;
 		}
@@ -1129,6 +1160,7 @@ body {
 		width: 360px;
 		padding: 12px 16px;
 		margin-bottom: 20px;
+		box-sizing: border-box;
 		&:focus {
 			outline: 1px solid $main-color;
 		}
@@ -1145,6 +1177,7 @@ body {
 		width: 100px;
 		min-height: 35px;
 		cursor: pointer;
+		transition: 500ms;
 		&:focus {
 			outline: 1px solid $main-color;
 		}
@@ -1207,6 +1240,7 @@ body {
 		padding: 15px 43px;
 		box-sizing: border-box;
 		position: relative;
+		transition: 500ms;
 		&::before {
 			content: "";
 			height: 1px;
@@ -1231,8 +1265,148 @@ body {
 	}
 }
 
-// наши преимущества
+//форма регистрации registration.html
 
+.registation-content-box {
+	display: flex;
+	justify-content: space-between;
+	padding: 64px 0 96px;
+}
+
+.registration-form {
+	margin-right: 30px;
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		color: #222222;
+		margin-bottom: 20px;
+	}
+	&__input {
+		@extend .shopping-cart-shipping__input;
+		margin: 0;
+		display: block;
+
+		&:nth-child(even) {
+			margin-bottom: 20px;
+		}
+	}
+	&__radio-wrp {
+		display: flex;
+		margin: 33px 0;
+	}
+	&__radio {
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 13px;
+		color: #000000;
+		text-transform: capitalize;
+		display: flex;
+		align-items: center;
+		&:first-of-type {
+			margin-right: 20px;
+		}
+	}
+	&__radio-input {
+		display: none;
+		& + .registration-form__radio::before {
+			content: "";
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			border: 1px solid #a4a4a4;
+			border-radius: 1em;
+			margin-right: 0.5em;
+		}
+
+		&:checked + .registration-form__radio::before {
+			background-color: $main-color;
+			width: 1.5em;
+			height: 1.5em;
+		}
+		&:checked + .registration-form__radio {
+			text-transform: uppercase;
+			color: $main-color;
+			animation: checked 3s infinite linear alternate;
+		}
+	}
+	&__caption {
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 16px;
+		color: #b1b1b1;
+		width: 360px;
+		margin: 15px 0 40px;
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 167px;
+		min-height: 50px;
+		background-color: $main-color;
+		color: #fff;
+		text-transform: uppercase;
+		cursor: pointer;
+		border: 1px solid $main-color;
+		box-sizing: border-box;
+		transition: background 500ms, color 500ms, box-shadow 500ms;
+		& > svg {
+			fill: #fff;
+			margin-left: 20px;
+			transition: fill 500ms;
+		}
+		&:hover {
+			background-color: #fff;
+			color: $main-color;
+			& > svg {
+				fill: $main-color;
+			}
+		}
+		&:active {
+			background-color: $main-color;
+			color: #fff;
+			box-shadow: 1px 1px 8px $main-color;
+			& > svg {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.registration-advantages {
+	&__title {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		color: #000000;
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		color: #000000;
+		margin: 22px 0;
+		max-width: 650px;
+	}
+
+	&__list {
+		list-style-type: none;
+		list-style-image: url(../img/list-registration-img.svg);
+		list-style-position: inside;
+	}
+	&__item {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		color: #000000;
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+}
+// наши преимущества index.html
 .our-advantages {
 	margin: 95px 0 0;
 	background-color: #222224;
@@ -1301,6 +1475,10 @@ body {
 	&__img {
 		display: block;
 		margin: 0 auto;
+		transition: 10s;
+		&:hover {
+			animation: rotate 5s infinite linear;
+		}
 	}
 
 	&__text {
@@ -1373,6 +1551,7 @@ body {
 		cursor: pointer;
 		position: absolute;
 		right: 5px;
+		transition: background 500ms, color 500ms;
 
 		&:hover {
 			background: $color-text;
@@ -1422,6 +1601,7 @@ body {
 	text-decoration: none;
 	cursor: pointer;
 	margin: 0 8px 0 0;
+	transition: background-color 500ms, color 500ms;
 
 	&:last-child {
 		margin: 0;

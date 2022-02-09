@@ -1,4 +1,55 @@
 @import url(//fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes checked {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
+@keyframes checked {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -153,6 +204,15 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 15;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.category-nav__menu:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .category-nav__title {
@@ -682,6 +742,8 @@ body {
           align-items: center;
   color: #000;
   cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .product-carousel__button:hover {
@@ -794,6 +856,8 @@ body {
   min-height: 48px;
   padding: 5px;
   cursor: pointer;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .product-filter-form__button:hover {
@@ -1060,12 +1124,20 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   cursor: pointer;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .card-item__button:hover {
   border: 1px solid #f16d7f;
   -webkit-box-shadow: 1px 1px 8px #f16d7f;
           box-shadow: 1px 1px 8px #f16d7f;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 10s linear;
+  transition: -webkit-transform 10s linear;
+  transition: transform 10s linear;
+  transition: transform 10s linear, -webkit-transform 10s linear;
 }
 
 .card-item__button:active {
@@ -1092,6 +1164,10 @@ body {
   padding: 14px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: background-color 1s, color 1s, -webkit-box-shadow 1s;
+  transition: background-color 1s, color 1s, -webkit-box-shadow 1s;
+  transition: background-color 1s, color 1s, box-shadow 1s;
+  transition: background-color 1s, color 1s, box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .browse-all-product-button:hover {
@@ -1154,6 +1230,8 @@ body {
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .shopping-cart-form__product-button:focus {
@@ -1271,15 +1349,17 @@ body {
   margin: 20px 0;
 }
 
-.shopping-cart-shipping__input {
+.shopping-cart-shipping__input, .registration-form__input {
   border: 1px solid #a4a4a4;
   height: 45px;
   width: 360px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.shopping-cart-shipping__input:focus {
+.shopping-cart-shipping__input:focus, .registration-form__input:focus {
   outline: 1px solid #f16d7f;
 }
 
@@ -1294,6 +1374,8 @@ body {
   width: 100px;
   min-height: 35px;
   cursor: pointer;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .shopping-cart-shipping__button:focus {
@@ -1364,6 +1446,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .shopping-cart-checkout__button::before {
@@ -1389,6 +1473,184 @@ body {
 .shopping-cart-checkout__button:active {
   background-color: #f16d7f;
   color: #fff;
+}
+
+.registation-content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 64px 0 96px;
+}
+
+.registration-form {
+  margin-right: 30px;
+}
+
+.registration-form__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.registration-form__input {
+  margin: 0;
+  display: block;
+}
+
+.registration-form__input:nth-child(even) {
+  margin-bottom: 20px;
+}
+
+.registration-form__radio-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 33px 0;
+}
+
+.registration-form__radio {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registration-form__radio:first-of-type {
+  margin-right: 20px;
+}
+
+.registration-form__radio-input {
+  display: none;
+}
+
+.registration-form__radio-input + .registration-form__radio::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #a4a4a4;
+  border-radius: 1em;
+  margin-right: 0.5em;
+}
+
+.registration-form__radio-input:checked + .registration-form__radio::before {
+  background-color: #f16d7f;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.registration-form__radio-input:checked + .registration-form__radio {
+  text-transform: uppercase;
+  color: #f16d7f;
+  -webkit-animation: checked 3s infinite linear alternate;
+          animation: checked 3s infinite linear alternate;
+}
+
+.registration-form__caption {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #b1b1b1;
+  width: 360px;
+  margin: 15px 0 40px;
+}
+
+.registration-form__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 167px;
+  min-height: 50px;
+  background-color: #f16d7f;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #f16d7f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background 500ms, color 500ms, -webkit-box-shadow 500ms;
+  transition: background 500ms, color 500ms, -webkit-box-shadow 500ms;
+  transition: background 500ms, color 500ms, box-shadow 500ms;
+  transition: background 500ms, color 500ms, box-shadow 500ms, -webkit-box-shadow 500ms;
+}
+
+.registration-form__button > svg {
+  fill: #fff;
+  margin-left: 20px;
+  -webkit-transition: fill 500ms;
+  transition: fill 500ms;
+}
+
+.registration-form__button:hover {
+  background-color: #fff;
+  color: #f16d7f;
+}
+
+.registration-form__button:hover > svg {
+  fill: #f16d7f;
+}
+
+.registration-form__button:active {
+  background-color: #f16d7f;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 8px #f16d7f;
+          box-shadow: 1px 1px 8px #f16d7f;
+}
+
+.registration-form__button:active > svg {
+  fill: #fff;
+}
+
+.registration-advantages__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.registration-advantages__text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: 22px 0;
+  max-width: 650px;
+}
+
+.registration-advantages__list {
+  list-style-type: none;
+  list-style-image: url(../img/list-registration-img.svg);
+  list-style-position: inside;
+}
+
+.registration-advantages__item {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.registration-advantages__item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .our-advantages {
@@ -1469,6 +1731,13 @@ body {
 .comment__img {
   display: block;
   margin: 0 auto;
+  -webkit-transition: 10s;
+  transition: 10s;
+}
+
+.comment__img:hover {
+  -webkit-animation: rotate 5s infinite linear;
+          animation: rotate 5s infinite linear;
 }
 
 .comment__text {
@@ -1543,6 +1812,8 @@ body {
   cursor: pointer;
   position: absolute;
   right: 5px;
+  -webkit-transition: background 500ms, color 500ms;
+  transition: background 500ms, color 500ms;
 }
 
 .subscribe__button:hover {
@@ -1608,6 +1879,8 @@ body {
   text-decoration: none;
   cursor: pointer;
   margin: 0 8px 0 0;
+  -webkit-transition: background-color 500ms, color 500ms;
+  transition: background-color 500ms, color 500ms;
 }
 
 .social-button:last-child {
