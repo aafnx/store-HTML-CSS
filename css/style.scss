@@ -1151,6 +1151,13 @@ body {
 		text-align: center;
 		color: #656565;
 		border: 1px solid #eaeaea;
+		//сокрытие стрелочек нашел на stackoverflow
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			display: none; //<- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0;
+		}
 		&:focus {
 			outline: 1px solid $main-color;
 		}

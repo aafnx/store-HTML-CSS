@@ -1359,6 +1359,12 @@ body {
   border: 1px solid #eaeaea;
 }
 
+.shopping-cart-product-item__quantity::-webkit-outer-spin-button, .shopping-cart-product-item__quantity::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .shopping-cart-product-item__quantity:focus {
   outline: 1px solid #f16d7f;
 }
