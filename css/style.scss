@@ -267,6 +267,10 @@ body {
 	background-color: #f8f3f4;
 	min-height: 148px;
 
+	&_no-margin {
+		margin: 0;
+	}
+
 	&_box {
 		display: flex;
 		align-items: center;
@@ -443,7 +447,7 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-top: 51px;
+	margin: 51px 0 65px;
 
 	&__wrp {
 		width: 360px;
@@ -910,9 +914,7 @@ body {
 
 	&__list-item {
 		list-style-type: none;
-		&:nth-child(4),
-		&:nth-child(5),
-		&:last-child {
+		&:not(:nth-child(-n + 3)) {
 			margin-top: 15px;
 		}
 
