@@ -130,4 +130,22 @@
 		padding: 64px 0;
 		margin: 0 auto 130px;
 	}
+
+	//	cart.html
+	.shopping-cart-form {
+		flex-direction: column;
+		margin-top: 59px;
+		&__wrp:last-child {
+			display: flex;
+			justify-content: space-between;
+			margin: 64px 0 0;
+		}
+		&__button-box {
+			margin-top: 62px;
+			justify-content: space-evenly;
+		}
+	}
+	.shopping-cart-product-item {
+		max-width: 734px;
+	}
 }
