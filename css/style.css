@@ -1533,7 +1533,7 @@ body {
 }
 
 .registration-form {
-  margin-right: 30px;
+  margin-right: 5px;
 }
 
 .registration-form__text {
@@ -1576,6 +1576,10 @@ body {
 
 .registration-form__radio:first-of-type {
   margin-right: 20px;
+}
+
+.registration-form__radio:last-child {
+  display: none;
 }
 
 .registration-form__radio-input {
@@ -1687,6 +1691,10 @@ body {
   transition: color 500ms;
 }
 
+.registration-advantages {
+  max-width: 652px;
+}
+
 .registration-advantages__title {
   font-weight: 300;
   font-size: 24px;
@@ -1701,13 +1709,12 @@ body {
   line-height: 29px;
   color: #000000;
   margin: 22px 0;
-  max-width: 650px;
 }
 
 .registration-advantages__list {
   list-style-type: none;
   list-style-image: url(../img/list-registration-img.svg);
-  list-style-position: inside;
+  margin-left: 26px;
 }
 
 .registration-advantages__item {
@@ -2117,5 +2124,28 @@ body {
   }
   .shopping-cart-product-item {
     max-width: 734px;
+  }
+  .registation-content-box {
+    margin: 40px auto 96px;
+  }
+  .registration-form__radio:last-child {
+    display: block;
+    margin-left: 20px;
+  }
+  .registration-advantages {
+    max-width: 354px;
+  }
+  .registration-advantages__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .registration-advantages__text {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 32px 0 22px 0;
+  }
+  .registration-advantages__item {
+    font-size: 16px;
+    line-height: 19px;
   }
 }

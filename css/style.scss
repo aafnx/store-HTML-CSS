@@ -1309,7 +1309,7 @@ body {
 }
 
 .registration-form {
-	margin-right: 30px;
+	margin-right: 5px;
 	&__text {
 		font-weight: 300;
 		font-size: 16px;
@@ -1340,6 +1340,9 @@ body {
 		align-items: center;
 		&:first-of-type {
 			margin-right: 20px;
+		}
+		&:last-child {
+			display: none;
 		}
 	}
 	&__radio-input {
@@ -1427,6 +1430,7 @@ body {
 }
 
 .registration-advantages {
+	max-width: 652px;
 	&__title {
 		font-weight: 300;
 		font-size: 24px;
@@ -1440,13 +1444,12 @@ body {
 		line-height: 29px;
 		color: #000000;
 		margin: 22px 0;
-		max-width: 650px;
 	}
 
 	&__list {
 		list-style-type: none;
 		list-style-image: url(../img/list-registration-img.svg);
-		list-style-position: inside;
+		margin-left: 26px;
 	}
 	&__item {
 		font-weight: 300;
@@ -1673,4 +1676,4 @@ body {
 	}
 }
 
-@import "_media.scss";
+@import "_media-tablet.scss";
