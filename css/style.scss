@@ -314,6 +314,7 @@ body {
 		}
 		&_active {
 			color: $main-color;
+			font-weight: 700;
 			&:hover {
 				background-color: transparent;
 			}
@@ -379,11 +380,18 @@ body {
 	margin-top: 65px;
 	display: flex;
 	justify-content: space-between;
-
+	&__link {
+		display: flex;
+		max-width: inherit;
+		width: 100%;
+		min-height: inherit;
+		flex-direction: column;
+		text-align: center;
+		text-decoration: none;
+		justify-content: center;
+	}
 	&__item {
 		display: flex;
-		align-items: center;
-		justify-content: center;
 		background-color: #211616b2;
 		background-blend-mode: darken;
 		max-width: 360px;
@@ -412,12 +420,6 @@ body {
 			min-height: 180px;
 			background-image: url(../img/category-accesories-img.jpg);
 		}
-	}
-
-	&__link {
-		display: block;
-		text-align: center;
-		text-decoration: none;
 	}
 
 	&__text {
@@ -881,7 +883,7 @@ body {
 }
 
 .product-cards-header {
-	margin: 0 auto;
+	margin: 0 auto 48px;
 
 	&__title {
 		text-align: center;
@@ -904,11 +906,15 @@ body {
 	justify-content: space-around;
 	align-content: center;
 	flex-wrap: wrap;
-	margin: (48px-15px) 0 0 0;
+	margin: 0;
 
 	&__list-item {
 		list-style-type: none;
-		margin: 15px 0;
+		&:nth-child(4),
+		&:nth-child(5),
+		&:last-child {
+			margin-top: 15px;
+		}
 
 		&_margin {
 			margin-left: 20px;

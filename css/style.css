@@ -381,6 +381,7 @@ body {
 
 .breadcrumbs__link_active {
   color: #f16d7f;
+  font-weight: 700;
 }
 
 .breadcrumbs__link_active:hover {
@@ -459,16 +460,28 @@ body {
           justify-content: space-between;
 }
 
+.main-page-category__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: inherit;
+  width: 100%;
+  min-height: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main-page-category__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #211616b2;
   background-blend-mode: darken;
   max-width: 360px;
@@ -497,12 +510,6 @@ body {
   max-width: 1140px;
   min-height: 180px;
   background-image: url(../img/category-accesories-img.jpg);
-}
-
-.main-page-category__link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
 }
 
 .main-page-category__text {
@@ -1027,7 +1034,7 @@ body {
 }
 
 .product-cards-header {
-  margin: 0 auto;
+  margin: 0 auto 48px;
 }
 
 .product-cards-header__title {
@@ -1055,12 +1062,15 @@ body {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 33px 0 0 0;
+  margin: 0;
 }
 
 .product-cards-box__list-item {
   list-style-type: none;
-  margin: 15px 0;
+}
+
+.product-cards-box__list-item:nth-child(4), .product-cards-box__list-item:nth-child(5), .product-cards-box__list-item:last-child {
+  margin-top: 15px;
 }
 
 .product-cards-box__list-item_margin {
@@ -1985,8 +1995,8 @@ body {
   .page-product-cards {
     margin-top: 156px;
   }
-  .product-cards-box {
-    margin: 72px 0 0 0;
+  .product-cards-header {
+    margin: 0 auto 72px;
   }
   .product-cards-box__list-item {
     margin: 0;
@@ -2037,5 +2047,33 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .page-content-info {
+    margin: 0 0 24px 0;
+  }
+  .filters-box {
+    margin: 0 0 40px 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page-product-cards_no-margin {
+    margin: 0;
+  }
+  .adp-tablet-catalog-disp-none {
+    display: none;
+  }
+  .options-product__wrp {
+    left: -10px;
+  }
+  .options-product:nth-child(3) > .options-product__wrp {
+    left: -20px;
+  }
+  .options-product:last-child > .options-product__wrp {
+    left: -35px;
+    width: 110px;
+  }
+  .pagination {
+    margin: 40px auto 0 auto;
   }
 }

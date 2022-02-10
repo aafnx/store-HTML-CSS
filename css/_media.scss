@@ -3,7 +3,7 @@
 		max-width: 768px;
 		padding: 0 15px;
 	}
-
+	//index.html
 	.main-page-title__wrp {
 		min-height: 368px;
 		background-position: -25px;
@@ -44,9 +44,8 @@
 	.page-product-cards {
 		margin-top: 156px;
 	}
-
-	.product-cards-box {
-		margin: 72px 0 0 0;
+	.product-cards-header {
+		margin: 0 auto 72px;
 	}
 
 	.product-cards-box__list-item {
@@ -94,5 +93,34 @@
 	}
 	.footer-top__box {
 		flex-direction: column;
+	}
+	//catalog.html
+	.page-content-info {
+		margin: 0 0 24px 0;
+	}
+	.filters-box {
+		margin: 0 0 40px 0;
+		justify-content: space-between;
+	}
+	.page-product-cards_no-margin {
+		margin: 0;
+	}
+	//в десктопной версии 9 карточек товаров, в странцие ля планшета 8, поэтому карточке, которой нет в планшетной версии добавил класс
+	.adp-tablet-catalog-disp-none {
+		display: none;
+	}
+	.options-product__wrp {
+		left: -10px;
+	}
+
+	.options-product:nth-child(3) > .options-product__wrp {
+		left: -20px;
+	}
+	.options-product:last-child > .options-product__wrp {
+		left: -35px;
+		width: 110px;
+	}
+	.pagination {
+		margin: 40px auto 0 auto;
 	}
 }
