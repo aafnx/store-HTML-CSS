@@ -1,5 +1,88 @@
 @media (max-width: 667px) {
+	.container {
+		max-width: 375px;
+		padding: 0 8px;
+	}
+
+	.header-menu__account {
+		display: none;
+	}
+
+	.header-menu__shopping-cart {
+		display: none;
+	}
+
 	.main-page-title__wrp {
 		background: none;
+		justify-content: center;
+		min-height: 363px;
+	}
+	.main-page-title__header {
+		line-height: 38px;
+	}
+	.main-page-title__text {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.main-page-title__header::after {
+		top: 0;
+		left: -26px;
+		height: 61px;
+	}
+	.main-page-category {
+		margin: 64px 0 0 0;
+		flex-direction: column;
+		align-items: center;
+		&__item {
+			max-width: 343px;
+			min-height: 247px;
+			margin-bottom: 32px;
+			&_bgi-accesories {
+				margin: 0 auto;
+				min-height: 111px;
+			}
+		}
+	}
+	.page-product-cards {
+		margin-top: 64px;
+	}
+	.product-cards-header {
+		margin-bottom: 65px;
+	}
+	.product-cards-box {
+		margin-bottom: 41px;
+		&__list-item {
+			margin: 0;
+			&:nth-child(odd) {
+				margin: 0;
+			}
+			&:not(:first-child) {
+				margin: 0;
+			}
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+	.browse-all-product-button {
+		margin: 0 auto;
+	}
+	.our-advantages {
+		margin: 96px 0 0;
+	}
+	.advatages-card {
+		max-width: 300px;
+		&:last-child {
+			margin-bottom: 81px;
+		}
+	}
+	.footer-top {
+		padding: 54px 0 110px;
+		background-position: -480px;
+	}
+	.footer-bot__box {
+		flex-direction: column-reverse;
+		padding: 43px 0 9px;
 	}
 }

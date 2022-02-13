@@ -243,9 +243,18 @@ body {
 		font-weight: 900;
 		font-size: 48px;
 		line-height: 58px;
-		padding: 0 0 0 16px;
 		margin: 0 100px 0 0;
-		border-left: 12px solid $main-color;
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			background-color: $main-color;
+			width: 12px;
+			height: 92px;
+			position: absolute;
+			top: 5px;
+			left: -28px;
+		}
 	}
 
 	&__text {
@@ -1579,8 +1588,9 @@ body {
 		background: #e1e1e1;
 		outline: none;
 		border: 1px solid #e1e1e1;
-		width: 256px;
-		height: 49px;
+		max-width: 256px;
+		width: 100%;
+		min-height: 49px;
 		box-sizing: border-box;
 		border-radius: 30px 0 0 30px;
 		padding: 0 0 0 22px;
@@ -1591,8 +1601,9 @@ body {
 	}
 
 	&__button {
-		width: 100px;
-		height: 49px;
+		max-width: 100px;
+		width: 100%;
+		min-height: 49px;
 		background-color: $main-color;
 		border: 1px solid $main-color;
 		border-radius: 0 30px 30px 0;

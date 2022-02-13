@@ -306,9 +306,19 @@ body {
   font-weight: 900;
   font-size: 48px;
   line-height: 58px;
-  padding: 0 0 0 16px;
   margin: 0 100px 0 0;
-  border-left: 12px solid #f16d7f;
+  position: relative;
+}
+
+.main-page-title__header::after {
+  content: "";
+  display: block;
+  background-color: #f16d7f;
+  width: 12px;
+  height: 92px;
+  position: absolute;
+  top: 5px;
+  left: -28px;
 }
 
 .main-page-title__text {
@@ -1858,8 +1868,9 @@ body {
   background: #e1e1e1;
   outline: none;
   border: 1px solid #e1e1e1;
-  width: 256px;
-  height: 49px;
+  max-width: 256px;
+  width: 100%;
+  min-height: 49px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 30px 0 0 30px;
@@ -1871,8 +1882,9 @@ body {
 }
 
 .subscribe__button {
-  width: 100px;
-  height: 49px;
+  max-width: 100px;
+  width: 100%;
+  min-height: 49px;
   background-color: #f16d7f;
   border: 1px solid #f16d7f;
   border-radius: 0 30px 30px 0;
@@ -1977,6 +1989,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
   .main-page-title__wrp {
     min-height: 368px;
     background-position: -25px;
@@ -2147,7 +2163,96 @@ body {
 }
 
 @media (max-width: 667px) {
+  .container {
+    max-width: 375px;
+    padding: 0 8px;
+  }
+  .header-menu__account {
+    display: none;
+  }
+  .header-menu__shopping-cart {
+    display: none;
+  }
   .main-page-title__wrp {
     background: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 363px;
+  }
+  .main-page-title__header {
+    line-height: 38px;
+  }
+  .main-page-title__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .main-page-title__header::after {
+    top: 0;
+    left: -26px;
+    height: 61px;
+  }
+  .main-page-category {
+    margin: 64px 0 0 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-page-category__item {
+    max-width: 343px;
+    min-height: 247px;
+    margin-bottom: 32px;
+  }
+  .main-page-category__item_bgi-accesories {
+    margin: 0 auto;
+    min-height: 111px;
+  }
+  .page-product-cards {
+    margin-top: 64px;
+  }
+  .product-cards-header {
+    margin-bottom: 65px;
+  }
+  .product-cards-box {
+    margin-bottom: 41px;
+  }
+  .product-cards-box__list-item {
+    margin: 0;
+  }
+  .product-cards-box__list-item:nth-child(odd) {
+    margin: 0;
+  }
+  .product-cards-box__list-item:not(:first-child) {
+    margin: 0;
+  }
+  .product-cards-box__list-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .browse-all-product-button {
+    margin: 0 auto;
+  }
+  .our-advantages {
+    margin: 96px 0 0;
+  }
+  .advatages-card {
+    max-width: 300px;
+  }
+  .advatages-card:last-child {
+    margin-bottom: 81px;
+  }
+  .footer-top {
+    padding: 54px 0 110px;
+    background-position: -480px;
+  }
+  .footer-bot__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 43px 0 9px;
   }
 }
