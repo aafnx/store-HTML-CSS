@@ -582,20 +582,27 @@ body {
 }
 
 .filter-main[open] .filter-main__title {
-  color: #ef5b70;
-  background: url(../img/sort-ico-open.svg) 55px no-repeat;
+  fill: #f16d7f;
+}
+
+.filter-main[open] .filter-main__title::before {
+  color: #f16d7f;
 }
 
 .filter-main__title {
   list-style-type: none;
-  background: url(../img/sort-ico.svg) 55px no-repeat;
+  margin: 0 0 16px 0;
+  cursor: pointer;
+}
+
+.filter-main__title::before {
+  content: "filter";
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  margin: 0 0 16px 0;
-  cursor: pointer;
+  margin-right: 9px;
 }
 
 .filter-main-nav {
@@ -2233,10 +2240,10 @@ body {
     margin-bottom: 16px;
   }
   .browse-all-product-button {
-    margin: 0 auto;
+    margin: 0 auto 96px;
   }
   .our-advantages {
-    margin: 96px 0 0;
+    margin: 0;
   }
   .advatages-card {
     max-width: 300px;
@@ -2254,5 +2261,40 @@ body {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding: 43px 0 9px;
+  }
+  .page-content-info_box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .page-product-cards_no-margin {
+    margin: 0;
+  }
+  .filters-box__wrp {
+    width: 87px;
+  }
+  .filter-main {
+    width: 200px;
+  }
+  .filter-main__title > svg {
+    width: 37px;
+    height: 25px;
+  }
+  .filter-main__title::before {
+    content: "";
+  }
+  .options-product {
+    margin: 0;
+  }
+  .options-product__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .pagination {
+    margin-bottom: 64px;
   }
 }

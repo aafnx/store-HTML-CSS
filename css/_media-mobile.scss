@@ -1,4 +1,5 @@
 @media (max-width: 667px) {
+	//index.html
 	.container {
 		max-width: 375px;
 		padding: 0 8px;
@@ -66,10 +67,10 @@
 		}
 	}
 	.browse-all-product-button {
-		margin: 0 auto;
+		margin: 0 auto 96px;
 	}
 	.our-advantages {
-		margin: 96px 0 0;
+		margin: 0;
 	}
 	.advatages-card {
 		max-width: 300px;
@@ -84,5 +85,40 @@
 	.footer-bot__box {
 		flex-direction: column-reverse;
 		padding: 43px 0 9px;
+	}
+	//catalog.html
+	.page-content-info_box {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	.page-product-cards_no-margin {
+		margin: 0;
+	}
+	//фильтры
+	.filters-box__wrp {
+		width: 87px;
+	}
+	.filter-main {
+		width: 200px;
+	}
+	.filter-main__title {
+		& > svg {
+			width: 37px;
+			height: 25px;
+		}
+		&::before {
+			content: "";
+		}
+	}
+	.options-product {
+		margin: 0;
+		&__title {
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+	//-------------------
+	.pagination {
+		margin-bottom: 64px;
 	}
 }

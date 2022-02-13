@@ -480,21 +480,25 @@ body {
 	}
 
 	&[open] .filter-main__title {
-		color: #ef5b70;
-		// не разобрался как поменять цвет текущей svg иконки, просто меняю на другую иконку
-		background: url(../img/sort-ico-open.svg) 55px no-repeat;
+		fill: $main-color;
+	}
+	&[open] .filter-main__title::before {
+		color: $main-color;
 	}
 
 	&__title {
 		list-style-type: none;
-		background: url(../img/sort-ico.svg) 55px no-repeat;
-		text-transform: uppercase;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 17px;
-		color: #000000;
 		margin: 0 0 16px 0;
 		cursor: pointer;
+		&::before {
+			content: "filter";
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 17px;
+			color: #000000;
+			margin-right: 9px;
+		}
 	}
 
 	&-nav {
