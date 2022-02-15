@@ -654,7 +654,9 @@ body {
 	justify-content: space-between;
 	background-color: #f7f7f7;
 	height: 777px;
-
+	&__img {
+		width: 100%;
+	}
 	&__button {
 		display: flex;
 		background: rgba(42, 42, 42, 0.15);
@@ -725,7 +727,7 @@ body {
 		line-height: 17px;
 		text-align: center;
 		color: #5e5e5e;
-		width: 550px;
+		max-width: 550px;
 		margin: 0 auto 32px auto;
 	}
 
@@ -735,14 +737,14 @@ body {
 		line-height: 29px;
 		color: $main-color;
 		text-align: center;
-		margin-bottom: 130px;
+		margin-bottom: 65px;
 		&::after {
 			content: "";
 			display: block;
 			width: 640px;
 			height: 1px;
 			background-color: #eaeaea;
-			margin: 65px auto;
+			margin: 65px auto 0;
 		}
 	}
 }

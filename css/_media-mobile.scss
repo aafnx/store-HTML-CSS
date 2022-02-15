@@ -121,4 +121,51 @@
 	.pagination {
 		margin-bottom: 64px;
 	}
+	//product.html
+	.product-carousel {
+		height: 624px;
+		&__button {
+			position: absolute;
+			&:first-child {
+				left: 0;
+			}
+			&:last-child {
+				right: 0;
+			}
+		}
+	}
+
+	.product-description {
+		padding: 64px 0;
+		margin: 0 0 64px;
+		&__collection {
+			margin-bottom: 12px;
+		}
+		&__title {
+			margin-bottom: 32px;
+		}
+		&__text {
+			max-width: 326px;
+		}
+		&__price {
+			margin-bottom: 50px;
+			&::after {
+				width: 175px;
+				margin: 32px auto 0;
+			}
+		}
+	}
+	.product-filter-form__box {
+		margin-bottom: 65px;
+	}
+	.dropdown-filter__title {
+		font-size: 10px;
+		line-height: 12px;
+	}
+	.dropdown-filter__list {
+		width: 77px;
+	}
+	.page-product-cards_margin-product {
+		margin-bottom: 64px;
+	}
 }
