@@ -1658,6 +1658,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 167px;
+  width: 100%;
   min-height: 50px;
   background-color: #f16d7f;
   color: #fff;
@@ -1681,39 +1682,22 @@ body {
 
 .registration-form__button:hover {
   background-color: #fff;
+  color: #f16d7f;
 }
 
 .registration-form__button:hover > svg {
   fill: #f16d7f;
 }
 
-.registration-form__button:hover > .registration-form__button-input {
-  color: #f16d7f;
-}
-
 .registration-form__button:active {
   background-color: #f16d7f;
+  color: #fff;
   -webkit-box-shadow: 1px 1px 8px #f16d7f;
           box-shadow: 1px 1px 8px #f16d7f;
 }
 
 .registration-form__button:active > svg {
   fill: #fff;
-}
-
-.registration-form__button:active > .registration-form__button-input {
-  color: #fff;
-}
-
-.registration-form__button-input {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  text-transform: uppercase;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: color 500ms;
-  transition: color 500ms;
 }
 
 .registration-advantages {

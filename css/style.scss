@@ -1402,6 +1402,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		max-width: 167px;
+		width: 100%;
 		min-height: 50px;
 		background-color: $main-color;
 		color: #fff;
@@ -1417,32 +1418,18 @@ body {
 		}
 		&:hover {
 			background-color: #fff;
+			color: $main-color;
 			& > svg {
 				fill: $main-color;
 			}
-			& > .registration-form__button-input {
-				color: $main-color;
-			}
 		}
-
 		&:active {
 			background-color: $main-color;
+			color: #fff;
 			box-shadow: 1px 1px 8px $main-color;
 			& > svg {
 				fill: #fff;
 			}
-			& > .registration-form__button-input {
-				color: #fff;
-			}
-		}
-		&-input {
-			background-color: transparent;
-			outline: none;
-			border: none;
-			text-transform: uppercase;
-			color: #fff;
-			cursor: pointer;
-			transition: color 500ms;
 		}
 	}
 }
