@@ -773,7 +773,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #f7f7f7;
-  height: 777px;
+  min-height: 777px;
 }
 
 .product-carousel__img {
@@ -1422,7 +1422,8 @@ body {
 .shopping-cart-shipping__input, .registration-form__input {
   border: 1px solid #a4a4a4;
   height: 45px;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   padding: 12px 16px;
   margin-bottom: 20px;
   -webkit-box-sizing: border-box;
@@ -1642,7 +1643,7 @@ body {
   font-size: 13px;
   line-height: 16px;
   color: #b1b1b1;
-  width: 360px;
+  max-width: 360px;
   margin: 15px 0 40px;
 }
 
@@ -2305,16 +2306,7 @@ body {
     margin-bottom: 64px;
   }
   .product-carousel {
-    height: 624px;
-  }
-  .product-carousel__button {
-    position: absolute;
-  }
-  .product-carousel__button:first-child {
-    left: 0;
-  }
-  .product-carousel__button:last-child {
-    right: 0;
+    min-height: 624px;
   }
   .product-description {
     padding: 64px 0;
@@ -2411,5 +2403,17 @@ body {
     font-size: 13px;
     line-height: 16px;
     font-weight: 300;
+  }
+  .registration-form {
+    margin: 0;
+  }
+  .registation-content-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registration-advantages {
+    margin: 40px 0 0;
   }
 }
