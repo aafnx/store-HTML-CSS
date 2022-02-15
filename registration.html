@@ -19,24 +19,24 @@
 			<header class="header-page">
 				<div class="container">
 					<div class="header-menu">
-						<ul class="header-menu__list">
-							<li>
-								<a href="index.html"><img src="img/logo.svg" alt="brand logo" class="header-menu__logo"></a>
-							</li>
-							<li>
-								<!-- не совсем понятно как реализуется в макете поиск, просиходит переход на другую страницу, или поле поиска появляется после клика на иконку поиска. Я пошел 2 путем. Появление меню поиска реализовал через details и summary, чтобы работало именно по клику, а не по наведению. Как я понял, другой способ сделать появление меню по клику, только через JS -->
-								<form action="#" class="search-form header-menu__search-form_styled">
-									<details class="search-form__wrp">
-										<summary class="search-form__dropdown">
-										</summary>
-										<input type="search" name="menu-search" placeholder="press Enter for search"
-											class="search-form__input">
-									</details>
-								</form>
-							</li>
-						</ul>
+						<div class="header-menu__wrp">
+							<a href="index.html"><img src="img/logo.svg" alt="brand logo" class="header-menu__logo"></a>
+							<form action="#" class="search-form header-menu__search-form_styled">
+								<input type="checkbox" name="search" id="search" class="search-form__switch-input">
+								<label for="search" class="search-form__switch-label">
+									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
+										class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 512 512">
+										<path
+											d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+										</path>
+									</svg>
+								</label>
+								<input type="search" name="menu-search" placeholder="press Enter for search" class="search-form__input">
+							</form>
+						</div>
 
-						<ul class="header-menu__list">
+						<ul class="header-menu__wrp">
 							<li>
 								<details class="category-nav">
 									<summary class="category-nav__dropdown">
@@ -151,14 +151,12 @@
 					</div>
 				</div>
 			</header>
-
 			<main class="main-page-content">
 				<div class="page-content-info">
 					<div class="container page-content-info_box">
 						<h3 class="page-content-info__title">registration</h3>
 					</div>
 				</div>
-
 				<div class="container registation-content-box">
 					<form action="#" class="registration-form">
 						<p class="registration-form__text">Your Name</p>
@@ -174,26 +172,27 @@
 							<label for="gender-female" class="registration-form__radio">
 								female
 							</label>
+							<input type="radio" name="select-gender" id="gender-other" class="registration-form__radio-input">
+							<label for="gender-other" class="registration-form__radio">
+								other
+							</label>
 						</div>
 						<p class="registration-form__text">Login details</p>
-						<input type="email" class="registration-form__input" required>
-						<input type="password" class="registration-form__input" pattern="\S{8}" required>
+						<input type="email" placeholder="Email" class="registration-form__input" required>
+						<input type="password" placeholder="Password" class="registration-form__input" pattern="\S{8}" required>
 						<p class="registration-form__caption">Please use 8&nbsp;or more characters, with at&nbsp;least 1&nbsp;number
 							and a
 							mixture of&nbsp;uppercase and lowercase letters</p>
-						<button class="registration-form__button">
-							join now
+						<label for="registration" class="registration-form__button">
+							<input type="submit" value="join now" id="registration" class="registration-form__button-input">
 							<svg width="17" height="10" viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" />
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" />
 							</svg>
-
-						</button>
-
+						</label>
 					</form>
-
 					<article class="registration-advantages">
 						<h4 class="registration-advantages__title">loyality has its perks</h4>
 						<p class="registration-advantages__text">Get in&nbsp;on&nbsp;the loyalty program where you can earn points
@@ -218,12 +217,9 @@
 							</li>
 						</ul>
 					</article>
-
 				</div>
-
 			</main>
 		</div>
-
 		<footer>
 			<div class="footer-top">
 				<div class="container footer-top__box">
@@ -253,38 +249,39 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="footer-bot">
 				<div class="container">
 					<div class="footer-bot__box">
 						<p class="footer-bot__copyright">
 							&copy;&nbsp;2021 Brand All Rights Reserved.
 						</p>
-
-						<div class="footer-bot__social">
-							<a href="//www.facebook.com/" target="_blank" class="social-button">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-
-							<a href="//www.instagram.com/" target="_blank" class="social-button">
-								<i class="fab fa-instagram"></i>
-							</a>
-
-							<a href="//www.pinterest.ru/" target="_blank" class="social-button">
-								<i class="fab fa-pinterest-p"></i>
-							</a>
-
-							<a href="//twitter.com/" target="_blank" class="social-button">
-								<i class="fab fa-twitter"></i>
-							</a>
-						</div>
+						<ul class="footer-bot__social-list">
+							<li class="footer-bot__social-list-item">
+								<a href="//www.facebook.com/" target="_blank" class="social-button">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li class="footer-bot__social-list-item">
+								<a href="//www.instagram.com/" target="_blank" class="social-button">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li class="footer-bot__social-list-item">
+								<a href="//www.pinterest.ru/" target="_blank" class="social-button">
+									<i class="fab fa-pinterest-p"></i>
+								</a>
+							</li>
+							<li class="footer-bot__social-list-item">
+								<a href="//twitter.com/" target="_blank" class="social-button">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-
-
 </body>
 
 </html>

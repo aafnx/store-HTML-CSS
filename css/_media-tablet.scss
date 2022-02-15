@@ -1,0 +1,177 @@
+@media (max-width: 1024px) {
+	.container {
+		max-width: 768px;
+		padding: 0 15px;
+	}
+	//index.html
+	.main-page-title__wrp {
+		min-height: 368px;
+		background-position: -25px;
+	}
+
+	.main-page-title__img {
+		max-width: 368px;
+		background-position: 0 0;
+		background-size: cover;
+	}
+
+	.main-page-title__header {
+		margin: 0;
+		font-size: 37px;
+	}
+
+	.main-page-title__text {
+		font-size: 24px;
+	}
+
+	.main-page-category {
+		margin: 20px 0 0;
+	}
+
+	.main-page-category__item {
+		max-width: 232px;
+		min-height: 167px;
+		&_bgi-men {
+			margin: 0 19px;
+		}
+		&_bgi-accesories {
+			margin: 20px 0 0 0;
+			max-width: 735px;
+			min-height: 116px;
+		}
+	}
+
+	.product-cards-header {
+		margin: 0 auto 72px;
+	}
+
+	.product-cards-box__list-item {
+		margin: 0;
+		&:nth-child(odd) {
+			margin-right: 5px;
+		}
+		&:not(:first-child) {
+			margin-top: 17px;
+		}
+		&:nth-child(2) {
+			margin-top: 0;
+		}
+	}
+
+	.product-cards-box__list-item_margin {
+		margin: 0;
+	}
+
+	.our-advantages {
+		margin: 65px 0 0;
+		&__box {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.advatages-card_margin {
+		margin: 0;
+	}
+
+	.advatages-card {
+		max-width: 360px;
+		margin: 0 0 48px 0;
+		&:first-child {
+			margin-top: 48px;
+		}
+		&:last-child {
+			margin-bottom: 64px;
+		}
+	}
+	.footer-top {
+		padding: 64px 0 140px 0;
+		background-position: -400px;
+	}
+	.footer-top__box {
+		flex-direction: column;
+	}
+	//catalog.html
+	.page-content-info {
+		margin: 0 0 24px 0;
+		&_no-margin {
+			margin: 0;
+		}
+	}
+	.filters-box {
+		margin: 0 0 40px 0;
+		justify-content: space-between;
+	}
+
+	//в десктопной версии 9 карточек товаров, в странцие ля планшета 8, поэтому карточке, которой нет в планшетной версии добавил класс
+	.adp-tablet-disp-none {
+		display: none;
+	}
+	.options-product__wrp {
+		left: -10px;
+	}
+
+	.options-product:nth-child(3) > .options-product__wrp {
+		left: -20px;
+	}
+	.options-product:last-child > .options-product__wrp {
+		left: -35px;
+		width: 110px;
+	}
+	.pagination {
+		margin: 40px auto 0 auto;
+	}
+
+	//product.html
+	.product-description {
+		top: 0;
+		border-left: none;
+		border-right: none;
+		padding: 64px 0;
+		margin: 0 auto 130px;
+	}
+
+	//	cart.html
+	.shopping-cart-form {
+		flex-direction: column;
+		margin-top: 59px;
+		&__wrp:last-child {
+			display: flex;
+			justify-content: space-between;
+			margin: 64px 0 0;
+		}
+		&__button-box {
+			margin-top: 62px;
+			justify-content: space-evenly;
+		}
+	}
+	.shopping-cart-product-item {
+		max-width: 734px;
+	}
+
+	//registration.html
+	.registation-content-box {
+		margin: 40px auto 96px;
+	}
+	.registration-form__radio:last-child {
+		display: block;
+		margin-left: 20px;
+	}
+
+	.registration-advantages {
+		max-width: 354px;
+		&__title {
+			font-size: 16px;
+			line-height: 19px;
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 19px;
+			margin: 32px 0 22px 0;
+		}
+		&__item {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+}
