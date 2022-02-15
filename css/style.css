@@ -1285,6 +1285,9 @@ body {
   text-decoration: none;
   -webkit-transition: 500ms;
   transition: 500ms;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .shopping-cart-form__product-button:focus {
@@ -2264,7 +2267,7 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    padding: 43px 0 9px;
+    padding: 43px 0 24px;
   }
   .page-content-info_box {
     -webkit-box-orient: vertical;
@@ -2315,7 +2318,7 @@ body {
   }
   .product-description {
     padding: 64px 0;
-    margin: 0 0 64px;
+    margin: 0 auto 64px;
   }
   .product-description__collection {
     margin-bottom: 12px;
@@ -2345,5 +2348,68 @@ body {
   }
   .page-product-cards_margin-product {
     margin-bottom: 64px;
+  }
+  .shopping-cart-form {
+    margin: 39px auto 96px;
+  }
+  .shopping-cart-form__button-box {
+    margin-top: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .shopping-cart-form__product-button {
+    font-size: 12px;
+    line-height: 14px;
+    width: 174px;
+    min-height: 33px;
+  }
+  .shopping-cart-form__wrp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shopping-cart-form__wrp:last-child {
+    margin: 48px 0 0;
+  }
+  .shopping-cart-product-item {
+    max-width: 358px;
+    min-height: 188px;
+  }
+  .shopping-cart-product-item:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+  .shopping-cart-product-item__img {
+    height: 188px;
+    width: 144px;
+  }
+  .shopping-cart-product-item__wrp {
+    padding: 14px 0 27px 17px;
+    margin: 0 60px 0 0;
+  }
+  .shopping-cart-product-item__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 26px;
+  }
+  .shopping-cart-product-item__close-btn {
+    top: 17px;
+    right: 12px;
+  }
+  .shopping-cart-product-item__feature {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .shopping-cart-product-item__feature:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .shopping-cart-product-item__quantity {
+    width: 30px;
+  }
+  .shopping-cart-shipping__input, .registration-form__input {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
   }
 }

@@ -1088,6 +1088,8 @@ body {
 		text-transform: uppercase;
 		text-decoration: none;
 		transition: 500ms;
+		padding: 5px;
+		box-sizing: border-box;
 		&:focus {
 			outline: 1px solid $main-color;
 		}
