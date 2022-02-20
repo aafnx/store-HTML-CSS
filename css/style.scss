@@ -465,8 +465,24 @@ body {
 	padding: 13px 16px 15px;
 	box-sizing: border-box;
 	user-select: none;
+}
 
-	&-switch__text {
+.filter-main-switch {
+	&__input {
+		display: none;
+		&:checked ~ .filter-main {
+			display: block;
+			position: absolute;
+			width: 360px;
+			background: #fff;
+			box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+			top: -13px;
+			left: 3px;
+			z-index: 15;
+		}
+	}
+
+	&__text {
 		display: block;
 		cursor: pointer;
 		color: #000000;
@@ -488,67 +504,55 @@ body {
 			line-height: 17px;
 		}
 	}
-	&-switch__input {
-		display: none;
-		&:checked ~ .filter-main {
-			display: block;
-			position: absolute;
-			width: 360px;
-			background: #fff;
-			box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-			top: -13px;
-			left: 3px;
-			z-index: 15;
+}
+
+.filter-main-nav {
+	margin-bottom: 18px;
+
+	&[open] .filter-main-nav__title {
+		color: $main-color;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		list-style-type: none;
+		border-bottom: 1px solid #ebebeb;
+		border-left: 5px solid $main-color;
+		padding: 9px 0 9px 10px;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		color: #6f6e6e;
+		cursor: pointer;
+	}
+
+	&__item {
+		list-style-type: none;
+
+		&:not(:last-child) .filter-main-nav__link {
+			margin: 0 0 11px 0;
+		}
+
+		&:first-child .filter-main-nav__link {
+			margin-top: 25px;
 		}
 	}
-	&-nav {
-		margin-bottom: 18px;
 
-		&[open] .filter-main-nav__title {
+	&__link {
+		text-decoration: none;
+		display: block;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		color: #6f6e6e;
+		padding: 0 0 0 16px;
+
+		&:hover {
 			color: $main-color;
 		}
 
-		&__title {
-			text-transform: uppercase;
-			list-style-type: none;
-			border-bottom: 1px solid #ebebeb;
-			border-left: 5px solid $main-color;
-			padding: 9px 0 9px 10px;
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 17px;
-			color: #6f6e6e;
-			cursor: pointer;
-		}
-
-		&__item {
-			list-style-type: none;
-
-			&:not(:last-child) .filter-main-nav__link {
-				margin: 0 0 11px 0;
-			}
-
-			&:first-child .filter-main-nav__link {
-				margin-top: 25px;
-			}
-		}
-
-		&__link {
-			text-decoration: none;
-			display: block;
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 17px;
-			color: #6f6e6e;
-			padding: 0 0 0 16px;
-
-			&:hover {
-				color: $main-color;
-			}
-
-			&:active {
-				background-color: rgba(0, 0, 0, 0.21);
-			}
+		&:active {
+			background-color: rgba(0, 0, 0, 0.21);
 		}
 	}
 }

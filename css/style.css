@@ -567,6 +567,22 @@ body {
           user-select: none;
 }
 
+.filter-main-switch__input {
+  display: none;
+}
+
+.filter-main-switch__input:checked ~ .filter-main {
+  display: block;
+  position: absolute;
+  width: 360px;
+  background: #fff;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  top: -13px;
+  left: 3px;
+  z-index: 15;
+}
+
 .filter-main-switch__text {
   display: block;
   cursor: pointer;
@@ -592,22 +608,6 @@ body {
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-}
-
-.filter-main-switch__input {
-  display: none;
-}
-
-.filter-main-switch__input:checked ~ .filter-main {
-  display: block;
-  position: absolute;
-  width: 360px;
-  background: #fff;
-  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-  top: -13px;
-  left: 3px;
-  z-index: 15;
 }
 
 .filter-main-nav {
